@@ -1,19 +1,23 @@
-# vue3_custom
+# 项目名称
+银行客户管理系统页面
 
-## Project setup
-```
+
+## 功能特性
+- 功能1
+- 功能2
+- 功能3
+
+## 快速开始
+### 安装
+```bash
+# 安装依赖
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+### 运行
+```bash
+# 启动开发服务器
+npm run dev
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 项目结构
