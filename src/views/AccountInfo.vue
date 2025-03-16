@@ -49,13 +49,15 @@ const hasPrev = ref(false);
 
 const fetchAccounts = async (page = 1) => {
   try {
-    const url = new URL('http://127.0.0.1:8000/api/accounts/');
+    const url = new URL('http://localhost:8000/api/accounts/');
     if (searchQuery.value.trim()) {
       url.searchParams.append('search', searchQuery.value);
     }
     url.searchParams.append('page', page);
 
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      credentials: 'include', // 允许携带 cookie
+    });
     if (response.ok) {
       const data = await response.json();
       console.log('Fetched accounts:', data);

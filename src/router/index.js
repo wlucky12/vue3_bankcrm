@@ -16,10 +16,11 @@ import EditCustomer from '../views/EditCustomer.vue'
 import Analysis from '@/views/Analysis.vue'
 import AccountDetail from '@/views/AccountDetail.vue'
 import AccountInfo from '@/views/AccountInfo.vue'
-
+import Register from '@/views/Register.vue'
 const routes = [
   {
     path: '/',
+    name: 'home',
     component: Home
   },
   {
@@ -45,7 +46,7 @@ const routes = [
   {
     path: '/customer-info',
     name: 'CustomerInfo',
-    component: () => import('../views/CustomerInfo.vue'),
+    component: CustomerInfo
   },
   {
     path: '/transaction',
@@ -57,7 +58,13 @@ const routes = [
   },
   {
     path: '/login',
+    name: 'login',
     component: Login
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register
   },
   {
     path: '/logout',
@@ -70,7 +77,7 @@ const routes = [
   {
     path: '/customer-detail/:id',
     name: 'CustomerDetail',
-    component: () => import('../views/CustomerDetail.vue'),
+    component: CustomerDetail
   },
   {
     path: '/edit-customer/:id',

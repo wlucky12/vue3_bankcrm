@@ -33,7 +33,9 @@ const transactionAmountChart = ref(null);
 
 const fetchData = async () => {
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/analysis');
+    const response = await fetch('http://localhost:8000/api/analysis',{
+    credentials: 'include', // 允许携带 cookie
+    });
     if (response.ok) {
       const data = await response.json();
       renderCharts(data);
