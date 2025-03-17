@@ -1,15 +1,7 @@
 <template>
   <nav>
-    <ul class="left-nav">
-      <li><router-link to="/">首页</router-link></li>
-      <li><router-link to="/open-account">客户开户</router-link></li>
-      <li><router-link to="/customer-info">客户信息</router-link></li>
-      <li><router-link to="/account-info">账户信息</router-link></li>
-      <li><router-link to="/transaction">交易</router-link></li>
-      <li><router-link to="/data-analysis">数据分析</router-link></li>
-    </ul>
     <div class="admin-icon-container">
-      <a href="http://localhost:8000/admin" class="admin-icon" target="_blank">
+      <a href="#" class="admin-icon" @click.prevent>
         <i class="fas fa-user"></i><!-- 用户图标 -->
       </a>
       <div class="admin-dropdown">
@@ -44,47 +36,16 @@ const logout = async () => {
 </script>
 
 <style scoped>
-/* 导航栏样式 */
-nav {
-  background-color: #ffffff; /* 背景为白色 */
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
-}
-
-/* 左侧导航链接样式 */
-.left-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px; /* 链接间距 */
-}
-
-.left-nav li a {
-  color: #333; /* 文字颜色为深灰色 */
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  transition: color 0.3s ease;
-}
-
-.left-nav li a:hover {
-  color: #007bff; /* 悬停时文字变为蓝色 */
-}
-
 /* 用户图标样式 */
 .admin-icon-container {
   position: relative;
   display: inline-block;
+  margin-right: 20px;
 }
 
 .admin-icon {
   font-size: 24px;
-  color: #333; /* 图标颜色为深灰色 */
+  color: #333;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -104,7 +65,7 @@ nav {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1;
-  overflow: hidden;
+  overflow: visible; /* 确保内容不会被裁剪 */
   transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 0;
   transform: translateY(-10px);
@@ -137,6 +98,7 @@ nav {
   flex-direction: column;
   gap: 8px;
   padding: 8px 0;
+  background-color: #ffffff; /* 确保背景为白色 */
 }
 
 .dropdown-item {
@@ -155,4 +117,4 @@ nav {
   background-color: #f5f5f5; /* 悬停时背景变为浅灰色 */
   color: #007bff; /* 悬停时文字变为蓝色 */
 }
-</style>
+</style> 
